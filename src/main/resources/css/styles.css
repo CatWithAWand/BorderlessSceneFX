@@ -1,0 +1,52 @@
+/* BorderlessSceneFX Styles */
+
+/* Universal */
+#borderlessScene, .borderless-scene-resize-pane {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+}
+
+#transparentWindow {
+    -fx-background-insets: 0;
+}
+
+#transparentWindow.white-noise {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../img/noise_pattern.png");
+    -fx-background-repeat: repeat;
+}
+
+#transparentWindow.glass-glare {
+    -fx-background-color: rgba(0, 0, 0, 0.15);
+    -fx-background-radius: 4px;
+    -fx-background-image: url("../img/glass_glare.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+}
+
+#transparentWindow.glass-transparent {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+    -fx-border-color: rgba(255, 255, 255, 0.45);
+}
+
+#transparentWindow.gnome {
+    -fx-background-color: rgba(244, 128, 82, 0.43);
+    -fx-border-color: #E07E53;
+    -fx-border-width: 1px;
+}
+
+#transparentWindow.minimalistic {
+    -fx-background-insets: 8px;
+    -fx-background-radius: 8px;
+    -fx-background-color: rgba(0, 0, 0, 0.25);
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-border-insets: 8px;
+    -fx-border-color: rgba(255, 255, 255, 0.25);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1), 10, 0.5, 0, 4);
+}

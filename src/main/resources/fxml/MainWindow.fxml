@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Separator?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.catwithawand.borderlessscenefx.application.MainWindowController" fx:id="root" id="root"
+           maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0"
+           prefWidth="754.0" xmlns="http://javafx.com/javafx/8.0.181">
+    <children>
+        <BorderPane id="borderPane">
+            <top>
+                <HBox fx:id="topBar" id="topBar" alignment="CENTER" BorderPane.alignment="CENTER"
+                      fillHeight="true">
+                    <children>
+                        <Label id="topBarLabel" alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308"
+                               text="BorderlessSceneFX"
+                               HBox.hgrow="ALWAYS">
+                        </Label>
+                        <Button fx:id="minimizeBtn" mnemonicParsing="false" prefHeight="29.0" prefWidth="45.0" text="-"
+                                styleClass="action-button"/>
+                        <Button fx:id="maximizeBtn" mnemonicParsing="false" prefHeight="29.0" prefWidth="45.0" text="+"
+                                styleClass="action-button"/>
+                        <Button fx:id="closeBtn" id="closeButton" mnemonicParsing="false" prefHeight="29.0"
+                                prefWidth="45.0" text="x"
+                                styleClass="action-button"/>
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <VBox id="content" alignment="CENTER" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label styleClass="header" text="Aero Snap Window Styles"/>
+                        <HBox alignment="CENTER" spacing="10.0">
+                            <children>
+                                <Button fx:id="whiteNoiseStyleBtn" mnemonicParsing="false" text="White Noise"
+                                        styleClass="style-button"/>
+                                <Button fx:id="glassGlareStyleBtn" mnemonicParsing="false" text="Glass Glare"
+                                        styleClass="style-button"/>
+                                <Button fx:id="glassTransparentStyleBtn" mnemonicParsing="false"
+                                        text="Glass Transparent" styleClass="style-button"/>
+                                <Button fx:id="gnomeStyleBtn" mnemonicParsing="false" text="Gnome"
+                                        styleClass="style-button"/>
+                                <Button fx:id="minimalisticStyleBtn" mnemonicParsing="false" text="Minimalistic"
+                                        styleClass="style-button"/>
+                                <Button fx:id="noneStyleBtn" mnemonicParsing="false" text="None"
+                                        styleClass="style-button"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                            <children>
+                                <VBox alignment="CENTER" spacing="10.0">
+                                    <children>
+                                        <Button fx:id="debugBtn" mnemonicParsing="false" text="Debug"
+                                                id="debugButton"/>
+                                        <Label fx:id="debugLabel" alignment="CENTER" maxWidth="1.7976931348623157E308"
+                                               text="*requires restarting the application to revert the debug styling."/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <Separator/>
+                        <Label styleClass="header" text="Properties &amp; Settings"/>
+                        <HBox alignment="CENTER" spacing="10.0">
+                            <children>
+                                <RadioButton fx:id="aeroSnapSelect" mnemonicParsing="false" selected="true"
+                                             text="Aero Snap" styleClass="setting-select"/>
+                                <RadioButton fx:id="doubleClickMaximizeSelect" mnemonicParsing="false" selected="true"
+                                             text="Double Click Maximize" styleClass="setting-select"/>
+                                <RadioButton fx:id="resizableSelect" mnemonicParsing="false" selected="true"
+                                             text="Resizable" styleClass="setting-select"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="10.0">
+                            <children>
+                                <RadioButton fx:id="verticalResizeSnapSelect" mnemonicParsing="false" selected="true"
+                                             text="Vertical Resize Snap" styleClass="setting-select"/>
+                                <RadioButton fx:id="preventMouseOverTaskbarSelect" mnemonicParsing="false"
+                                             selected="true" text="Prevent Mouse over Taskbar"
+                                             styleClass="setting-select"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="10.0">
+                            <children>
+                                <Label fx:id="maximizedLabel" alignment="CENTER" text="Maximized: false"
+                                       BorderPane.alignment="CENTER"/>
+                                <Label fx:id="snappedLabel" alignment="CENTER" text="Snapped: false"
+                                       BorderPane.alignment="CENTER"/>
+                                <Label fx:id="widthLabel" alignment="CENTER" text="Width: 0px"
+                                       BorderPane.alignment="CENTER"/>
+                                <Label fx:id="heightLabel" alignment="CENTER" text="Height: 0px"
+                                       BorderPane.alignment="CENTER"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</StackPane>

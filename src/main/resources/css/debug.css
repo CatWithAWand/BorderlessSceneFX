@@ -1,0 +1,60 @@
+/* BorderlessSceneFX Debug */
+
+/* Borderless Scene */
+#borderlessScene, .borderless-scene-resize-pane {
+    -fx-background-insets: 0;
+}
+
+.borderless-scene-resize-pane {
+    -fx-background-color: rgb(255, 0, 0, 0.3);
+}
+
+.borderless-scene-resize-pane:hover {
+    -fx-background-color: rgb(255, 0, 0, 0.8);
+}
+
+/* Sides */
+#leftPane:hover {
+    -fx-border-color: transparent transparent transparent black;
+}
+
+#rightPane:hover {
+    -fx-border-color: transparent black transparent transparent;
+}
+
+#topPane:hover {
+    -fx-border-color: black transparent transparent transparent;
+}
+
+#bottomPane:hover {
+    -fx-border-color: transparent transparent black transparent;
+}
+
+/* Corners */
+
+#topLeftPane:hover {
+    -fx-border-color: black transparent transparent black;
+}
+
+
+#topRightPane:hover {
+    -fx-border-color: black black transparent transparent;
+}
+
+
+#bottomRightPane:hover {
+    -fx-border-color: transparent black black transparent;
+}
+
+#bottomLeftPane:hover {
+    -fx-border-color: transparent transparent black black;
+}
+
+/* Transparent Window */
+
+#transparentWindow {
+    -fx-background-insets: 0;
+    -fx-background-color: rgb(0, 0, 0, 0.5);
+    -fx-border-width: 2px;
+    -fx-border-color: rgba(255, 0, 0, 0.8);
+}
