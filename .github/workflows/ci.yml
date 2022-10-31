@@ -18,6 +18,7 @@ jobs:
       - name: Setup Java JDK
         uses: actions/setup-java@v3.6.0
         with:
+          distribution: 'temurin'
           java-version: ${{ matrix.java }}
       - name: Verify with Maven
         run: mvn verify -B --file pom.xml
