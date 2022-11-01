@@ -36,6 +36,5 @@ jobs:
         run: |
           mvn \
             --no-transfer-progress \
-            --activate-profiles \
             --batch-mode \
             clean verify
