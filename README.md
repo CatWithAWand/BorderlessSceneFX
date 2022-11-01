@@ -35,43 +35,21 @@ repository.
 
 ## Getting Started
 
-### Gradle
-
-Add JitPack to your repositories
-
-```groovy
-repositories {
-    mavenCentral()
-    maven { url "https://jitpack.io" }
-}
-```
-
 Add BorderlessSceneFX to your dependencies
+
+### Gradle
 
 ```groovy
 dependencies {
-    implementation 'com.github.catwithawand:borderlessscenefx:1.0.0'
+    implementation 'com.catwithawand:borderlessscenefx:1.0.0'
 }
 ```
 
 ### Maven
 
-Add JitPack to your repositories
-
-``` XML
-<repositories>
-   <repository>
-     <id>jitpack.io</id>
-     <url>https://jitpack.io</url>
-   </repository>
-</repositories>
-```
-
-Add BorderlessSceneFX to your dependencies
-
 ``` XML
 <dependency>
-  <groupId>com.github.catwithawand</groupId>
+  <groupId>com.catwithawand</groupId>
   <artifactId>BorderlessSceneFX</artifactId>
   <version>1.0.0</version>
 </dependency>
@@ -148,7 +126,7 @@ For an actual implementation see the BorderlessSceneFX [demo application]().
 </details>
 
 <details>
-<summary><b>Glass Glare style</b></summary>
+<summary><b>Glass Transparent style</b></summary>
 
 ![demo_glass_transparent](https://res.cloudinary.com/dq6zv8koj/image/upload/v1667243029/GitHub-Assets/BorderlessSceneFX/demo_glass_transparent_y27eic.png)
 
