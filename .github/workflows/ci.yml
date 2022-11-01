@@ -1,5 +1,4 @@
 name: Java CI
-
 on: [push]
 
 jobs:
@@ -12,13 +11,22 @@ jobs:
       fail-fast: false
       max-parallel: 4
     name: Test JDK ${{ matrix.java }}, ${{ matrix.os }}
-
     steps:
-      - uses: actions/checkout@v2.5.0
+      - uses: actions/checkout@v3
       - name: Setup Java JDK
         uses: actions/setup-java@v3.6.0
         with:
           distribution: 'temurin'
           java-version: ${{ matrix.java }}
-      - name: Verify with Maven
-        run: mvn verify -B --file pom.xml
+      - id: install-secret-key
+        name: Install gpg secret key
+        run: |
+          cat <(echo -e "${{ secrets.OSSRH_GPG_SECRET_KEY }}") | gpg --batch --import
+      - id: verify-with-maven
+        name: Verify with Maven
+        run: |
+          mvn \
+            --no-transfer-progress \
+            --batch-mode \
+            -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }} \
+            clean verify

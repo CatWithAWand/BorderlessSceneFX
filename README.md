@@ -93,7 +93,7 @@ public void start(Stage primaryStage) throws Exception {
 
 ### Advanced example
 
-For an actual implementation see the BorderlessSceneFX [demo application]().
+For an actual implementation see the BorderlessSceneFX [demo application](https://github.com/CatWithAWand/BorderlessSceneFX/tree/main/src/main/java/com/catwithawand/borderlessscenefx/application).
 
 ## Showcase
 
